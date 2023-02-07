@@ -19,7 +19,8 @@ client_sock.sendall(bytes('Hello from client side'.encode('utf-8')))
 
 #4 Client gets response
 response_data = client_sock.recv(1024)
-print(response_data)
+resp_data_str = str(response_data.decode('utf-8'))
+print(resp_data_str)
 
 #5 Client closes the socket
 client_sock.close()
